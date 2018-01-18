@@ -9,6 +9,7 @@ App({
       console.log(e.msg);
       t && this.setCache("userinfo", e.msg, 7200);
       console.log(232323);
+      console.log(2341425123523523);
     })
 
       })*/
