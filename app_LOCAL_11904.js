@@ -10,15 +10,8 @@ App({
       t && this.setCache("userinfo", e.msg, 7200);
       console.log(232323);
       console.log(2341425123523523);
-
       console.log(123123123);
       console.log(22141241);
-
-      console.log(1231231231);
-      console.log(21212412412);
-console.log(1231231231);
-      console.log(21212412412);      
-
     })
 
       })*/
@@ -122,11 +115,12 @@ console.log(1231231231);
     }, 10)
   },
   url: function (e) {
-
+<<<<<<< HEAD
       this.setCache("mid", {mid:111}, 7200)
-
+=======
       this.setCache("mid", {mid:113}, 7200)
-
+>>>>>>> parent of 3eae12c... add2
+  },
   globalData: {
     appid: "wx0374e8ef4f1d6f8e",
     api: "https://mall.epaikj.com/wxapp.php?",
