@@ -11,7 +11,7 @@ App({
      /* wx.redirectTo({
         url: "/pages/message/auth/index?close=" + t + "&text=" + e
       })*/8fluijhjhjn
-    })
+    })fuiyy
   },
   requirejs: function (e) {
     return require("utils/" + e + ".js")
