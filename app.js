@@ -8,6 +8,7 @@ App({
       //页面重定向
       console.log(e.msg);
       t && this.setCache("userinfo", e.msg, 7200);
+      123123
      /* wx.redirectTo({
         url: "/pages/message/auth/index?close=" + t + "&text=" + e
       })*/
