@@ -1530,8 +1530,8 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  height:470rpx;
-  width:330rpx;
+  height: 200rpx;
+  width: 200rpx;
   z-index: 999;
   background-repeat: no-repeat;
   background-position: bottom right;

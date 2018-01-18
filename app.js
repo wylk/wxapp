@@ -10,7 +10,7 @@ App({
       t && this.setCache("userinfo", e.msg, 7200);
      /* wx.redirectTo({
         url: "/pages/message/auth/index?close=" + t + "&text=" + e
-      })*/
+      })*/8fluijhjhjn
     })
   },
   requirejs: function (e) {
@@ -110,7 +110,11 @@ App({
     }, 10)
   },
   url: function (e) {
+<<<<<<< HEAD
       this.setCache("mid", {mid:111}, 7200)
+=======
+      this.setCache("mid", {mid:113}, 7200)
+>>>>>>> parent of 3eae12c... add2
   },
   globalData: {
     appid: "wx0374e8ef4f1d6f8e",

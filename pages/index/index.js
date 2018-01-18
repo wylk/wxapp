@@ -23,48 +23,27 @@ Page({
     durationHOt: 1000,
     circularHot: true,
     hotimg: "/static/images/hotdot.jpg",
-    notification: "/static/images/notification.png",
-    mode: 'aspectFill',
-    src: {},
-    text: {},
-    getShopMsg: []
-  },
-  getShopMsg: function(){
-    var tt = this;
-    var  e =t.getCache("userinfo");
-    var openid = e.openId || e.openid
-    console.log(openid);
-    //console.log(t.getCache("userinfo"));
-    a.get("test/getshop_info",{openid:openid},function(a){
-      //console.log(t.data.getShopMsg);
-      a.list || (a.list = []),
-      typeof a.list === "object"  && (tt.setData({
-            getShopMsg: tt.data.getShopMsg.concat(a.list),
-            text: a.list.shop_name || "店名未设置",
-            src: a.list.shop_logo || "http://image-yp.test.upcdn.net/images/000/000/090/201712/5a3396bf1f5da.jpg"
-          }))
-      console.log(text);
-    })
+    notification: "/static/images/notification.png"
   },
   getShop: function () {
     var t = this;
     a.get("wxsp/shopInfo", {}, function (a) {
       //console.log('shop index', a, new Date());debugger;
-      //e.wxParse("wxParseData", "html", a.copyright, t, "5"),
+      e.wxParse("wxParseData", "html", a.copyright, t, "5"),
         t.setData({
           shop: a
         })
     })
   },
- /* onReachBottom: function () {
+  onReachBottom: function () {
     this.data.loaded || this.data.storeRecommand.length == this.data.total || this.getRecommand()
-  },*/
+  },
   getRecommand: function () {
     var t = this;
     t.setData({
       loading: true
     }),
-      a.get("test/getProduct", {
+      a.get("shop/get_recommand", {
         page: t.data.page
       }, function (a) {
         var e = {
@@ -77,7 +56,7 @@ Page({
           show: true
         }),
           a.list || (a.list = []),
-         typeof a.list === "object"  && (t.setData({
+          a.list.length > 0 && (t.setData({
             storeRecommand: t.data.storeRecommand.concat(a.list),
             page: a.page + 1
           }), a.list.length < a.pagesize && (e.loaded = true))
@@ -92,8 +71,7 @@ Page({
       title: a.shopname || "商城首页"
     }),
       this.getShop(),
-      this.getRecommand(),
-      this.getShopMsg()
+      this.getRecommand()
   },
   onShareAppMessage: function () {
     return a.onShareAppMessage()
