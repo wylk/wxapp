@@ -10,8 +10,13 @@ App({
       t && this.setCache("userinfo", e.msg, 7200);
      /* wx.redirectTo({
         url: "/pages/message/auth/index?close=" + t + "&text=" + e
+<<<<<<< HEAD
       })*/8fluijhjhjn
     })fuiyy
+=======
+      })*/
+    })
+>>>>>>> develop
   },
   requirejs: function (e) {
     return require("utils/" + e + ".js")
